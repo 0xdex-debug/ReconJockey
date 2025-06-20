@@ -15,7 +15,7 @@ class RealTimeMicrosoftIpLogger:
 
     def get_latest_url(self):
         """Finds the latest available URL for downloading"""
-        today = datetime.datetime.utcnow().strftime("%Y%m%d")  # Format: YYYYMMDD
+        today = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d")  # Format: YYYYMMDD
         for version in range(60, 0, -1):  # Check for timestamp variations
             url = self.b_url.format(date=today, version=version)
             # print(f"\n{url}\n")
