@@ -26,11 +26,7 @@ HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "en-US,en;q=0.9",
-    "Connection": "close",
-    "X-Forwarded-For": "127.0.0.1",
-    "X-Real-IP": "127.0.0.1",
-    "X-Originating-IP": "127.0.0.1",
-    "X-Custom-Test": "RedTeamCheck"
+    "Connection": "close"
 }
 
 class RealTimeMicrosoftIpLogger:
