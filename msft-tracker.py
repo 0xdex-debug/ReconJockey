@@ -112,6 +112,7 @@ class RealTimeMicrosoftIpLogger:
 
             if existing_data == new_data:
                 print("No changes detected, skipping update.")
+                time.sleep(600)
             else:
                 with open(self.file_path, "wb") as file:
                     file.write(new_data)
@@ -121,6 +122,7 @@ class RealTimeMicrosoftIpLogger:
             print(f"Error updating local file: {e}")
     
     def clean_up(self):
+        print(f"Cleaning...\nCleared {self.file_path}")
         os.remove(self.file_path)
         return None
 
